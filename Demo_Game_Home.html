@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> setting </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="topnav">
+		<div class="topnav-left">
+			<button class="btn"><i class="fa fa-bars"></i></button>
+		</div>
+		<div class="topnav-centered">
+			<button class="big-btn"><i class="fa fa-gamepad"></i></button>
+		</div>
+		
+		<div class="topnav-right">
+			<button class="btn"><i class="fa fa-bell"></i></button>
+		</div>
+	</div>
+	
+	<div class="slideshow-container">
+		<div class="inner-container">
+			<div class="mySlides fade">
+			  <img src="image/pubG.jpg" class="imgBig">
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="image/Pubg2.jpg" class="imgBig">
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="image/pubg3.jpg" class="imgBig">
+			</div>
+			<!--<img src="image/pubG.jpg" width="250" height="120" style="border-radius:3px;">-->
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	 </div>
+	 
+	 <div style="text-align:center",>
+       <span class="dot" onclick="currentSlide(1)"></span> 
+       <span class="dot" onclick="currentSlide(2)"></span> 
+       <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+	
+	<div class="leftimage">
+		<div class="leftDiv">
+			<img src="image/pubG.jpg" width="70px" height="50px" style="border-radius:3px;">
+		</div>
+		
+		<div class="rightDiv">
+		  <p class="p1">PUBG</p>
+		  <p class="p2"> What is PUBG Mobile Game?</p>
+		</div>
+	</div>
+	
+	<div class="gameDiv">
+		<div class="h1Div">
+			<p class="p1">Game Information </p>
+        </div>
+		
+		<div class="pdiv">
+			<p class="p3"> Battlegrounds is a player versus player shooter game in which up to one hundred
+			players fight in a battle royale, a type of large-scale last man standing deathmatch
+			where players fight to remain the last alive.</p>
+		</div>
+	</div>	
+     
+	 <div class="navbarbottom">
+		    <button class="home"><i class="fa fa-home"></i></button>
+			<button class="home"><i class="fa fa-shopping-cart"></i></button>
+			<button class="home"><i class="fa fa-user-circle-o"></i></button>
+			<button class="home"><i class="fa fa-bank"></i></button>
+			<button class="home"><i class="fa fa-cog"></i></button>
+	</div>	
+</body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
+</body>
+</html>
